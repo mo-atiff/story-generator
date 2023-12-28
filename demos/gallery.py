@@ -30,7 +30,7 @@ st.session_state.prompt_sess.append(st.session_state.userprompt)
 st.markdown("<h1 style='text-align: centre; color: yellow;'>Gallery</h1>", unsafe_allow_html=True)
 st.write("Vids generated through this app :)")
 
-direc = "C:\\Python3.10.1\\Lib\\site-packages\\QtDesigner\\VsCode Py\\story_gen\\dir_mp4"
+direc = "dir_mp4"
 
 directory_path = os.listdir(direc)
 
