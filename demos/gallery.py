@@ -12,8 +12,8 @@ if 'user_links' not in st.session_state:
 if 'prompt_sess' not in st.session_state:
     st.session_state.prompt_sess = []
 
-vids_links = ["C:\\Users\\Dell\\Downloads\\mysterious_island.mp4", "C:\\Users\\Dell\\Downloads\\animal_world.mp4", 
-                "C:\\Users\\Dell\\Downloads\\venice.mp4", "C:\\Users\\Dell\\Downloads\\mars.mp4"]
+vids_links = ["vids/mysterious_island.mp4", "vids/venice.mp4", 
+                "vids/mars.mp4", "vids/animal_world.mp4"]
 
 
 user_vids_links = []
