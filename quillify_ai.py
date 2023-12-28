@@ -183,10 +183,12 @@ def speak_text(text, voice, rate=150):
 
 
     download_dir = 'dir_mp3'
+    if not os.path.exists(download_dir):
+        os.makedirs(download_dir)
     # full_path = os.path.join(os.getcwd(), download_dir)
-    full_path = os.path.abspath(download_dir)
+    # full_path = os.path.abspath(download_dir)
     # file_path = os.path.join(full_path, "my_audio.wav")
-    file_path = os.path.abspath(os.path.join(full_path, "my_audio.wav"))
+    file_path = os.path.join(download_dir, "my_audio.wav")
     st.write("FILE PATH : ", file_path)
     engine.save_to_file(text, file_path)
     engine.runAndWait()
@@ -279,7 +281,7 @@ def main():
 
         st.write("BYTES PATH : ", bytes_path)
         st.write(os.path.exists(bytes_path))
-        with open(bytes_path, "rb") as mp3_file:
+        with open(os.path.join(bytes_path, "my_audio.wav"), "rb") as mp3_file:
             aud_bytes = mp3_file.read()
 
         audio = WAVE(bytes_path)  
