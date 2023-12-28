@@ -182,7 +182,7 @@ def speak_text(text, voice, rate=150):
     engine.setProperty('rate', rate)
 
 
-    download_dir = 'dirr_mp3'
+    download_dir = 'dir_mp3'
     # if not os.path.exists(download_dir):
     #     os.makedirs(download_dir)
     full_path = os.path.join(os.getcwd(), download_dir)
