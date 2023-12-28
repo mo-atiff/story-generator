@@ -189,10 +189,11 @@ def speak_text(text, voice, rate=150):
 
     # all_items = os.listdir(cwd)
     # st.write(all_items)
-    st.write(full_path)
+    # st.write(full_path)
     # os.makedirs(full_path, exist_ok=True)
     file_path = os.path.join(full_path, "my_audio.wav")
-    st.write("Checking for mp3 folder:", os.listdir(full_path))
+    # st.write("Checking for mp3 folder:", os.listdir(full_path))
+    st.write("FILE PATH : ", file_path)
 
     engine.save_to_file(text, file_path)
     engine.runAndWait()
@@ -270,8 +271,6 @@ def main():
         st.markdown(f"***{st.session_state.story}***", unsafe_allow_html=True)
     
 
-        # st.stop()
-
         if "The Title of the story needs more details for story generation" in story:
             st.error('Please provide more details for story generation')
             st.stop()
@@ -285,7 +284,7 @@ def main():
         else:
             bytes_path = speak_text(story, voices[1])
 
-
+	st.write("BYTES PATH : ", bytes_path)
         with open(bytes_path, "rb") as mp3_file:
             aud_bytes = mp3_file.read()
 
