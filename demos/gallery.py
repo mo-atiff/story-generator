@@ -32,7 +32,10 @@ st.write("Vids generated through this app :)")
 
 direc = "dir_mp4"
 
-directory_path = os.listdir(direc)
+try:
+    directory_path = os.listdir(direc)
+except Exception as e:
+    pass
 
 def side_bar_view():
     return ele.sides
