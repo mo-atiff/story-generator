@@ -184,9 +184,11 @@ def speak_text(text, voice, rate=150):
 
     download_dir = 'dir_mp3'
     full_path = os.path.join(os.getcwd(), download_dir)
-    file_path = os.path.join(full_path, "my_audio.wav")
-    st.write(os.path.exists(full_path))
-    engine.save_to_file(text, file_path)
+    file_path = os.path.join(full_path, "my_audioo.txt")
+    with open(file_path, "w") as file:
+        file.write("ekjr er eoio e o e")
+        print(f"Content successfully written to {file_path}")
+    # engine.save_to_file(text, file_path)
     st(f"File created at: {file_path}")
     engine.runAndWait()
     engine.stop()
@@ -281,8 +283,10 @@ def main():
 
         st.write("BYTES PATH : ", bytes_path)
         st.write(os.path.exists(bytes_path))
-        with open(bytes_path, "rb") as mp3_file:
+        with open(bytes_path, "r") as mp3_file:
             aud_bytes = mp3_file.read()
+
+       st.write(aud_bytes)
 
         audio = WAVE(bytes_path)  
         audio_info = audio.info 
