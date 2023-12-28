@@ -1,0 +1,11 @@
+ipython==8.16.1
+langchain==0.0.352
+moviepy==1.0.3
+mutagen==1.47.0
+Pillow==10.1.0
+Pillow==10.1.0
+pyttsx3==2.90
+Requests==2.31.0
+spacy==3.7.1
+st_pages==0.4.5
+streamlit==1.29.0
