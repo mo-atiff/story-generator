@@ -275,7 +275,7 @@ def main():
             bytes_path = speak_text(story, voices[1])
 
         st.write("BYTES PATH : ", bytes_path)
-	st.write(os.listdir("/"))
+        st.write(os.listdir("/"))
         with open(bytes_path, "rb") as mp3_file:
             aud_bytes = mp3_file.read()
 
