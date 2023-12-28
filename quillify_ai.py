@@ -184,6 +184,12 @@ def speak_text(text, voice, rate=150):
 
     download_dir = 'dir_mp3'
     full_path = os.path.join(os.getcwd(), download_dir)
+	
+    cwd = os.getcwd()
+
+    all_items = os.listdir(cwd)
+    st.write(all_items)
+	
     os.makedirs(full_path, exist_ok=True)
     file_path = os.path.join(full_path, "my_audio.wav")
     st.write("Checking for mp3 folder:", os.listdir(full_path))
