@@ -27,6 +27,7 @@ import string
 
 
 nlp = spacy.load("en_core_web_sm")
+engine = pyttsx3.init()
 
 st.set_page_config(
     page_title="Story to Audio",
@@ -173,7 +174,6 @@ headers = {"Authorization": f"Bearer {st.session_state.huggingtok}"}
 
 
 def speak_text(text, voice, rate=150):
-    engine = pyttsx3.init()
 
     print("TEXT : ", text, '\n')
     print("VOICE : ", voice, '\n')
