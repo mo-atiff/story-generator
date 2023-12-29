@@ -5,8 +5,7 @@ WORKDIR /app
 
 # install system dependencies
 RUN apt-get update && apt-get install -y \
-    espeak\
-    ffmpeg
+    espeak
 
 
 # install dependencies
