@@ -195,7 +195,12 @@ def speak_text(text, voice, rate=150):
     st.write("FULL PATH : ", full_path)
     file_path = os.path.join(full_path, "my_audio.wav")
     st.write("FILE PATH : ", file_path)
+    text = text.decode("latin-1")
+    proxy = engine._proxy
     engine.save_to_file(text, file_path)
+    proxy.notify('finished-utterance', completed=True)
+
+    # engine.save_to_file(text, file_path)
     st.write(text, file_path)
     engine.runAndWait()
     engine.stop()
