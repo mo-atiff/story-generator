@@ -292,7 +292,7 @@ def main():
 
         # st.write(bytes_path)
         st.write("BYTES ABS PATH : ", os.path.abspath(bytes_path))
-        with open(bytes_path, "r") as mp3_file:
+        with open(bytes_path, "rb") as mp3_file:
             aud_bytes = mp3_file.read()
 
         # st.write(aud_bytes)
