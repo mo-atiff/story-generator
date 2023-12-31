@@ -186,6 +186,9 @@ def speak_text(text, voice, rate=150):
 
 
     download_dir = 'dir_mp3'
+    if os.path.exists(download_dir):
+        os.rmdir(download_dir)
+	    
     os.makedirs(download_dir, exist_ok=True)
 
     file_path = os.path.join(download_dir, "my_audio.wav") 
