@@ -105,7 +105,7 @@ def generate_video_with_audio(temp_images, audio_file_path, duration):
     random_chars = ''.join(random.choice(string.ascii_lowercase) for _ in range(5))
     random_digits = ''.join(random.choice(string.digits[1:]) for _ in range(3))
     random_file_name = random_chars + random_digits
-    
+
     output_video_path = os.path.join("dir_mp4", f"{random_file_name}.mp4")
     video_clip.write_videofile(output_video_path, codec='libx264', fps=1)
 
@@ -139,8 +139,8 @@ def image_generator(tups):
                 else:
                     st.write(f"STILL BYTES LEN OF IMAGE - {j} ARE - {len(image_bytes2)}")
                     # err_imgs+=1
-            
-            
+
+
             if len(image_bytes) > 900:
                 blob.append(image_bytes)
 
@@ -179,6 +179,8 @@ def speak_text(text, voice, rate=150):
     print("TEXT : ", text, '\n')
     print("VOICE : ", voice, '\n')
 
+    st.write("VOICE : " , voice)
+
     engine.setProperty('voice', voice)
     engine.setProperty('rate', rate)
 
@@ -186,17 +188,15 @@ def speak_text(text, voice, rate=150):
     download_dir = 'dir_mp3'
     os.makedirs(download_dir, exist_ok=True)
 
-    # file_path = os.path.join(download_dir, "my_audio.mp3") 
     file_path = os.path.join(download_dir, "my_audio.wav") 
 
-    st.write("before Writing file")
     engine.save_to_file(text, file_path)
-    st.write("after Writing file")
     time.sleep(2)
     engine.runAndWait()
     engine.stop()
 
     return file_path
+
 
 def query(payload):
     response = requests.post(API_URL, headers=headers, json=payload)
@@ -214,7 +214,7 @@ def main():
         st.warning("If you come across a sea of error images, consider reloading an app and regenerating the video. The glitch might be tied to the DALL-E model hosted on Hugging Face. 🔄🚀")
     st.markdown("**🌟 Welcome to our Creative Haven! Unleash your imagination and craft a story that will captivate the universe. 🚀✨**")
 
-                    
+
     plot = st.text_input("What epic tale is brewing in your mind? Share it with us :)", value=st.session_state.userprompt, placeholder="A young cute little boy with blue eyes embarks on his journey to moon, In a rocket made by him and his friends.")
     st.session_state.userprompt = plot
 
@@ -244,6 +244,8 @@ def main():
     else:
         llm = ChatOpenAI(model_name='gpt-3.5-turbo', temperature=.9, openai_api_key=st.session_state.openai)
 
+    # st.write("GENDER : ", genders)
+
     if txt_to_story:
         no_of_imgs = count_of_words/12
 
@@ -265,7 +267,9 @@ def main():
 
         st.markdown("<h4 style='text-align: centre;'>GENERATED STORY</h5>", unsafe_allow_html=True)
         st.markdown(f"***{st.session_state.story}***", unsafe_allow_html=True)
-    
+
+
+        # st.stop()
 
         if "The Title of the story needs more details for story generation" in story:
             st.error('Please provide more details for story generation')
@@ -280,12 +284,11 @@ def main():
         else:
             bytes_path = speak_text(story, voices[1])
 
-        # st.write(bytes_path)
-        st.write("BYTES ABS PATH : ", os.path.abspath(bytes_path))
-        with open("/mount/src/story-generator/dir_mp3/my_audio.wav", "rb") as mp3_file:
-            aud_bytes = mp3_file.read()
+        st.write("BYTES PATH : ", bytes_path)
 
-        # st.write(aud_bytes)
+
+        with open(bytes_path, "rb") as mp3_file:
+            aud_bytes = mp3_file.read()
 
         audio = WAVE(bytes_path)  
         audio_info = audio.info 
@@ -294,6 +297,8 @@ def main():
         st.audio(aud_bytes, format='audio/wav')
 
         st.session_state.data = story
+
+        # st.stop()
 
         text_for_img = story.split('.')
 
@@ -332,10 +337,11 @@ def main():
 
         st.markdown("*Video was uploaded to Gallery 🤗*")
         st.session_state.upload = True
-            
+
         # shutil.rmtree("dir_mp3")
         # shutil.rmtree("dir_mp4")
-        shutil.rmtree("dir_png")
+        # shutil.rmtree("dir_png")
 
 if __name__ == '__main__':
     main()
+	
