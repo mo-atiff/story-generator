@@ -7,6 +7,7 @@ from langchain.chains import LLMChain, SimpleSequentialChain, SequentialChain
 from st_pages import Page, show_pages
 from markdowns import ele
 import re
+import time
 
 import requests
 import io
@@ -187,8 +188,11 @@ def speak_text(text, voice, rate=150):
 
     # file_path = os.path.join(download_dir, "my_audio.mp3") 
     file_path = os.path.join(download_dir, "my_audio.wav") 
-    
+
+    st.write("before Writing file")
     engine.save_to_file(text, file_path)
+    st.write("after Writing file")
+    time.sleep(2)
     engine.runAndWait()
     engine.stop()
 
