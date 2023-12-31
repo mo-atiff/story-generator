@@ -303,7 +303,7 @@ def main():
         st.session_state.data = story
 
         # st.stop()
-        engine.stop()
+        # engine.stop()
 
         text_for_img = story.split('.')
 
