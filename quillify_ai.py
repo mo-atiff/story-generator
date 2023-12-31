@@ -172,9 +172,10 @@ with st.sidebar :
 API_URL = "https://api-inference.huggingface.co/models/openskyml/dalle-3-xl"
 headers = {"Authorization": f"Bearer {st.session_state.huggingtok}"}
 
+engine = pyttsx3.init()
 
 def speak_text(text, voice, rate=150):
-    engine = pyttsx3.init()
+    # engine = pyttsx3.init()
 
     print("TEXT : ", text, '\n')
     print("VOICE : ", voice, '\n')
@@ -196,7 +197,7 @@ def speak_text(text, voice, rate=150):
     engine.save_to_file(text, file_path)
     time.sleep(2)
     engine.runAndWait()
-    engine.stop()
+    # engine.stop()
 
     return file_path
 
@@ -302,6 +303,7 @@ def main():
         st.session_state.data = story
 
         # st.stop()
+        engine.stop()
 
         text_for_img = story.split('.')
 
