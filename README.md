@@ -23,7 +23,8 @@ docker run -p 8501:8501 atiff/story_gen_docker:latest
 
 ## Configuration
 
-### API KEYS
+#### API KEYS
+
 Upon running the Streamlit app, you will be prompted to enter your OpenAI API key and Hugging Face API token. Please provide these keys to enable text and image generation functionalities.
 
 ## Usage
