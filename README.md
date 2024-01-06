@@ -13,3 +13,8 @@ docker pull atiff/story_gen_docker:latest
 ```
 
 ### Running the Docker Container
+After pulling the image, you can run the Docker container with the following command:
+
+```bash
+docker run -p 8501:8501 atiff/story_gen_docker:latest
+```
