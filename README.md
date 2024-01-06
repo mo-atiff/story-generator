@@ -18,3 +18,19 @@ After pulling the image, you can run the Docker container with the following com
 ```bash
 docker run -p 8501:8501 atiff/story_gen_docker:latest
 ```
+
+#### Open a browser and go to localhost:8501 to see the application
+
+## Configuration
+
+### API KEYS
+Upon running the Streamlit app, you will be prompted to enter your OpenAI API key and Hugging Face API token. Please provide these keys to enable text and image generation functionalities.
+
+## Usage
+Enter your OpenAI API key and Hugging Face API token.
+Pull the Docker image and run the container.
+Access the Streamlit app through your web browser.
+Provide a story prompt in the text input.
+Adjust the number of words for the generated story using a slider.
+Select the gender of the voice for narration and the style of images (Realistic, Cartoon, or Anime).
+Click the "Generate Story" button to create the story, voice narration, and video.
