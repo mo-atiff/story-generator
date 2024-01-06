@@ -35,3 +35,6 @@ Upon running the Streamlit app, you will be prompted to enter your OpenAI API ke
 - Adjust the number of words for the generated story using a slider.
 - Select the gender of the voice for narration and the style of images (Realistic, Cartoon, or Anime).
 - Click the "Generate Story" button to create the story, voice narration, and video.
+
+## License 
+This project is licensed under the MIT License.
