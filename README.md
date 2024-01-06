@@ -9,4 +9,7 @@ This is a Streamlit-based web application for generating stories and creating co
 To use the Story Generator project, you can pull the Docker image from Docker Hub. Follow these steps in your terminal:
 
 ```bash
-docker pull your_docker_username/story-generator:latest
+docker pull atiff/story_gen_docker:latest
+```
+
+### Running the Docker Container
