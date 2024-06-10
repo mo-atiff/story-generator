@@ -84,10 +84,10 @@ Here is an example of generating a story:
 ## Videos
 Here are some example videos generated using Quillify.ai:
 
-1. **Video 1**: [Watch on YouTube](https://www.youtube.com/watch?v=your_video_id)
-2. **Video 2**: [Watch on YouTube](https://www.youtube.com/watch?v=your_video_id)
-3. **Video 3**: [Watch on YouTube](https://www.youtube.com/watch?v=your_video_id)
-4. **Video 4**: [Watch on YouTube](https://www.youtube.com/watch?v=your_video_id)
+1. **Video 1**: [Animals World](https://mega.nz/file/ZxdGWIxa#ldIcug9PrBJd0YwzaA72GwfqZz4B5ogNuoa5BOUHPLs)
+2. **Video 2**: [Boy on Mars](https://mega.nz/file/EkUHGZYR#8lWd2l56wUEqXTMWJKBGlJm1105ZmRqwpZxXqfA07ps)
+3. **Video 3**: [Treasure Island](https://mega.nz/file/ggEUnQBS#QShTxb0LPaq3q5GodtNRODaDOE8jQ8RzNfh7JF73xiA)
+4. **Video 4**: [Love Story](https://mega.nz/file/M8kFHazT#l0FSrFFVDYH7u-eA9Gpb42UwFmtGBpEcTg63_MExOPw)
 
 ## Troubleshooting
 If you encounter any issues, consider the following steps:
