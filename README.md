@@ -81,6 +81,14 @@ Here is an example of generating a story:
 3. **Generated Images**: Displays images created from the story text.
 4. **Generated Video**: Compiles images and audio into a video.
 
+## Videos
+Here are some example videos generated using Quillify.ai:
+
+1. **Video 1**: [Watch on YouTube](https://www.youtube.com/watch?v=your_video_id)
+2. **Video 2**: [Watch on YouTube](https://www.youtube.com/watch?v=your_video_id)
+3. **Video 3**: [Watch on YouTube](https://www.youtube.com/watch?v=your_video_id)
+4. **Video 4**: [Watch on YouTube](https://www.youtube.com/watch?v=your_video_id)
+
 ## Troubleshooting
 If you encounter any issues, consider the following steps:
 - Ensure that you have entered valid API keys for OpenAI and Hugging Face.
