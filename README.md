@@ -13,6 +13,7 @@ Quillify.ai is an innovative application that allows users to create customized 
 - [Configuration](#configuration)
 - [Documentation](#documentation)
 - [Examples](#examples)
+- [Videos](#videos)
 - [Troubleshooting](#troubleshooting)
 - [Contributors](#contributors)
 - [License](#license)
