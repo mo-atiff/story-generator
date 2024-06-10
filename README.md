@@ -1,6 +1,3 @@
-Here's a README file based on the provided code files (`quillify_ai.py`, `demo.py`, and `gallery.py`). This README will help you upload the project to GitHub, providing a clear and comprehensive overview of the project.
-
-```markdown
 # Quillify.ai
 
 ## Introduction
@@ -95,4 +92,3 @@ If you encounter any issues, consider the following steps:
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for more details.
-```
